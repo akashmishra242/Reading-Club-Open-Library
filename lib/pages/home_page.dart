@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
-
 import 'business.dart';
 import 'entertainment.dart';
 import 'science_tech.dart';
@@ -16,6 +15,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   late TabController _controller;
+
   @override
   void initState() {
     super.initState();

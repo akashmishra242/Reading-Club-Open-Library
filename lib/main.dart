@@ -6,6 +6,8 @@ import 'package:reading_club_open_library/pages/login_page.dart';
 import 'package:reading_club_open_library/widgets/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
+import 'pages/landing_page.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -17,10 +19,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: HomePage(),
-        initialRoute: MyRoutes.homePage,
+        initialRoute: MyRoutes.landingPage,
         routes: {
           MyRoutes.homePage: (context) => HomePage(),
           MyRoutes.loginPage: (context) => LoginPage(),
+          MyRoutes.landingPage: (context) => LandingPage(),
         });
   }
 }
