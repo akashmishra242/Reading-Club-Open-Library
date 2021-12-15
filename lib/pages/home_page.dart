@@ -1,6 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'business.dart';
 import 'entertainment.dart';
@@ -20,6 +23,17 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     _controller = TabController(length: 3, vsync: this, initialIndex: 1);
+    loadData();
+  }
+
+  loadData() async {
+    final sciJson =
+        await rootBundle.loadString("lib'assets/files/sci_article.json");
+    var sciDecodedData = jsonDecode(sciJson);
+    var sciArticleData = sciDecodedData["sci_article"];
+    // CatalogModel.items =
+    //     List.from(sciArticleData).map<Item>((item) => Item.fromMap(item)).toList();
+    // setState(() {});
   }
 
   @override
