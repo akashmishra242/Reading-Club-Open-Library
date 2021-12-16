@@ -1,7 +1,7 @@
 // ignore_for_file: non_constant_identifier_names, unrelated_type_equality_checks
 
 class SciArticle {
-  List<Article> article = [];
+  static List<Article> article = [];
   Article getById(int id) =>
       article.firstWhere((element) => element.id == id, orElse: (null));
   Article getByPos(int pos) => article[pos];
@@ -45,15 +45,15 @@ class Article {
 
   factory Article.fromMap(Map<String, dynamic> map) {
     return Article(
-      map['id'] ?? 0,
-      map['name'] ?? '',
-      map['desc'] ?? '',
-      map['Date'] ?? '',
-      map['time'] ?? '',
-      map['Author'] ?? '',
-      map['image'] ?? '',
-      map['auth_image'] ?? '',
-      map['article'] ?? '',
+      map['id'],
+      map['name'],
+      map['desc'],
+      map['Date'],
+      map['time'],
+      map['Author'],
+      map['image'],
+      map['auth_image'],
+      map['article'],
     );
   }
 }

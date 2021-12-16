@@ -4,6 +4,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:reading_club_open_library/Article/science.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'business.dart';
 import 'entertainment.dart';
@@ -28,12 +29,13 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   loadData() async {
     final sciJson =
-        await rootBundle.loadString("lib'assets/files/sci_article.json");
+        await rootBundle.loadString("lib/assets/files/sci_article.json");
     var sciDecodedData = jsonDecode(sciJson);
     var sciArticleData = sciDecodedData["sci_article"];
-    // CatalogModel.items =
-    //     List.from(sciArticleData).map<Item>((item) => Item.fromMap(item)).toList();
-    // setState(() {});
+    SciArticle.article = List.from(sciArticleData)
+        .map<Article>((article) => Article.fromMap(article))
+        .toList();
+    setState(() {});
   }
 
   @override
