@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   loadEntData() async {
     final entJson =
-        await rootBundle.loadString("lib/assets/files/bus_article.json");
+        await rootBundle.loadString("lib/assets/files/ent_article.json");
     var entDecodedData = jsonDecode(entJson);
     var entArticleData = entDecodedData["ent_article"];
     EntArticle.article = List.from(entArticleData)
