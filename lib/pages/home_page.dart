@@ -4,6 +4,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:reading_club_open_library/Article/business.dart';
+import 'package:reading_club_open_library/Article/entertainment.dart';
 import 'package:reading_club_open_library/Article/science.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'business.dart';
@@ -24,16 +26,40 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     _controller = TabController(length: 3, vsync: this, initialIndex: 1);
-    loadData();
+    loadSciData();
+    loadBusData();
+    loadEntData();
   }
 
-  loadData() async {
+  loadSciData() async {
     final sciJson =
         await rootBundle.loadString("lib/assets/files/sci_article.json");
     var sciDecodedData = jsonDecode(sciJson);
     var sciArticleData = sciDecodedData["sci_article"];
     SciArticle.article = List.from(sciArticleData)
         .map<Article>((article) => Article.fromMap(article))
+        .toList();
+    setState(() {});
+  }
+
+  loadBusData() async {
+    final busJson =
+        await rootBundle.loadString("lib/assets/files/bus_article.json");
+    var busDecodedData = jsonDecode(busJson);
+    var busArticleData = busDecodedData["bus_article"];
+    BusArticle.article = List.from(busArticleData)
+        .map<BArticle>((article) => BArticle.fromMap(article))
+        .toList();
+    setState(() {});
+  }
+
+  loadEntData() async {
+    final entJson =
+        await rootBundle.loadString("lib/assets/files/bus_article.json");
+    var entDecodedData = jsonDecode(entJson);
+    var entArticleData = entDecodedData["ent_article"];
+    EntArticle.article = List.from(entArticleData)
+        .map<EArticle>((article) => EArticle.fromMap(article))
         .toList();
     setState(() {});
   }

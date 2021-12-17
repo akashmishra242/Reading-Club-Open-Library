@@ -11,6 +11,7 @@ class ScienceTech extends StatefulWidget {
 }
 
 class _ScienceTechState extends State<ScienceTech> {
+  bool isbookmarked = false;
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -65,7 +66,27 @@ class _ScienceTechState extends State<ScienceTech> {
                   ButtonBar(
                     alignment: MainAxisAlignment.end,
                     children: [
-                      Icon(Icons.bookmark_add),
+                      IconButton(
+                          onPressed: () {
+                            setState(() {
+                              isbookmarked = !isbookmarked;
+                            });
+                            isbookmarked
+                                ? ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                        duration:
+                                            const Duration(milliseconds: 1000),
+                                        content: "Bookmark Added".text.make()))
+                                : ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                        duration:
+                                            const Duration(milliseconds: 1000),
+                                        content:
+                                            "Bookmark Removed".text.make()));
+                          },
+                          icon: isbookmarked
+                              ? const Icon(Icons.bookmark_added_sharp)
+                              : const Icon(Icons.bookmark_add_sharp)),
                       ElevatedButton(
                         onPressed: () {
                           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
