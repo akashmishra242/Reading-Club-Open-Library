@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:reading_club_open_library/Article/business.dart';
+import 'package:reading_club_open_library/Article/entertainment.dart';
+import 'package:reading_club_open_library/DetailedPages/Entertainment_detailed_page.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class Entertainment extends StatefulWidget {
@@ -14,22 +15,22 @@ class _EntertainmentState extends State<Entertainment> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: BusArticle.article.length,
+      itemCount: EntArticle.article.length,
       itemBuilder: (context, index) {
-        final busItem = BusArticle.article[index];
+        final entItem = EntArticle.article[index];
         return VxBox(
                 child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Column(
               children: [
-                ListImage(image: busItem.image),
+                ListImage(image: entItem.image),
                 const SizedBox(
                   height: 16,
                 ),
                 Align(
                     alignment: Alignment.topRight,
-                    child: "By: ${busItem.Author}"
+                    child: "By: ${entItem.Author}"
                         .text
                         .bold
                         .textStyle(const TextStyle(fontStyle: FontStyle.italic))
@@ -42,13 +43,13 @@ class _EntertainmentState extends State<Entertainment> {
               child: Column(
                 // crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  busItem.name.text.bold.xl2.center.make(),
+                  entItem.name.text.bold.xl2.center.make(),
                   const SizedBox(
                     height: 4,
                   ),
                   Align(
                       alignment: Alignment.topRight,
-                      child: "On: ${busItem.Date} at: ${busItem.time}"
+                      child: "On: ${entItem.Date} at: ${entItem.time}"
                           .text
                           .textStyle(const TextStyle(fontSize: 10))
                           .make()),
@@ -57,7 +58,7 @@ class _EntertainmentState extends State<Entertainment> {
                   ),
                   Align(
                     alignment: Alignment.topRight,
-                    child: busItem.desc.text
+                    child: entItem.desc.text
                         .textStyle(
                             const TextStyle(fontSize: 15, color: Colors.purple))
                         .make(),
@@ -114,7 +115,14 @@ class _EntertainmentState extends State<Entertainment> {
             .p12
             .make()
             .py12()
-            .px4();
+            .px4()
+            .onTap(() {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => EDetailedPage(item: entItem),
+              ));
+        });
       },
     ).expand();
   }

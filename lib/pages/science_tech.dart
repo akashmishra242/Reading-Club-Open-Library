@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reading_club_open_library/DetailedPages/Science_detailed_page.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import 'package:reading_club_open_library/Article/science.dart';
@@ -88,13 +89,7 @@ class _ScienceTechState extends State<ScienceTech> {
                               ? const Icon(Icons.bookmark_added_sharp)
                               : const Icon(Icons.bookmark_add_sharp)),
                       ElevatedButton(
-                        onPressed: () {
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                              duration: const Duration(milliseconds: 1000),
-                              content: "This Option Will Be Available Soon"
-                                  .text
-                                  .make()));
-                        },
+                        onPressed: null,
                         child: "Read >>".text.bold.black.make(),
                         style: TextButton.styleFrom(
                             shape: const StadiumBorder(
@@ -110,12 +105,19 @@ class _ScienceTechState extends State<ScienceTech> {
           ],
         ))
             .color(const Color(0xFFF5F5F5))
-            .square(250)
+            .square(275)
             .rounded
             .p12
             .make()
             .py12()
-            .px4();
+            .px4()
+            .onTap(() {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => SDetailedPage(item: sciItem),
+              ));
+        });
       },
     ).expand();
   }

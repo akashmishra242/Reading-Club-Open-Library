@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, unused_import
 
 import 'package:flutter/material.dart';
+import 'package:reading_club_open_library/DetailedPages/Science_detailed_page.dart';
 import 'package:reading_club_open_library/pages/home_page.dart';
 import 'package:reading_club_open_library/pages/login_page.dart';
 import 'package:reading_club_open_library/widgets/routes.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
           MyRoutes.homePage: (context) => HomePage(),
           MyRoutes.loginPage: (context) => LoginPage(),
           MyRoutes.landingPage: (context) => LandingPage(),
+          //MyRoutes.sciDPage: (context) => SciDPage(),
         });
   }
 }

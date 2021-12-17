@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reading_club_open_library/Article/business.dart';
+import 'package:reading_club_open_library/DetailedPages/Business_detailed_page.dart';
+import 'package:reading_club_open_library/DetailedPages/Science_detailed_page.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class Business extends StatefulWidget {
@@ -114,7 +116,14 @@ class _BusinessState extends State<Business> {
             .p12
             .make()
             .py12()
-            .px4();
+            .px4()
+            .onTap(() {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => BDetailedPage(item: busItem),
+              ));
+        });
       },
     ).expand();
   }

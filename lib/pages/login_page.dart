@@ -1,28 +1,3 @@
-// // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-// import 'package:flutter/material.dart';
-// import 'package:velocity_x/velocity_x.dart';
-// class LoginPage extends StatelessWidget {
-//   const LoginPage({Key? key}) : super(key: key);
-//   @override
-//   Widget build(BuildContext context) {
-//     const String imageUrl =
-//         "https://cdn-icons-png.flaticon.com/512/295/295128.png";
-//     return SafeArea(
-//       child: Material(
-//         child: Column(
-//           children: [
-//             Image(image: NetworkImage(imageUrl)).h40(context),
-//             Column(
-//               children: [],
-//             ),
-//           ],
-//         ).pOnly(top: 10),
-//       ),
-//     );
-//   }
-// }
-// ignore_for_file: prefer_const_constructors, dead_code
-
 import 'package:flutter/material.dart';
 import 'home_page.dart';
 
@@ -88,7 +63,7 @@ class _LoginPageState extends State<LoginPage> {
                         decoration: InputDecoration(
                           labelText: "UserName",
                           hintText: "Enter UserName",
-                          labelStyle: TextStyle(
+                          labelStyle: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                             // color: Colors.teal,
@@ -106,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
                           return null;
                         },
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       TextFormField(
@@ -114,7 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                           decoration: InputDecoration(
                             labelText: "Password",
                             hintText: "Enter Password",
-                            labelStyle: TextStyle(
+                            labelStyle: const TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                               //  color: Colors.teal,
@@ -178,7 +153,7 @@ class _LoginPageState extends State<LoginPage> {
 
                             return null;
                           }),
-                      SizedBox(
+                      const SizedBox(
                         height: 40,
                       ),
                       Material(
@@ -194,7 +169,7 @@ class _LoginPageState extends State<LoginPage> {
                               : Colors.red,
                           onTap: () => moveToHome(context),
                           child: AnimatedContainer(
-                            duration: Duration(seconds: 1),
+                            duration: const Duration(seconds: 1),
                             width: changeButton ? 45 : 90,
                             height: changeButton ? 55 : 40,
                             alignment: Alignment.center,
@@ -206,7 +181,7 @@ class _LoginPageState extends State<LoginPage> {
                                         : Colors.red.shade900,
                                     size: 40,
                                   ))
-                                : Text(
+                                : const Text(
                                     "Login",
                                     style: TextStyle(
                                         fontSize: 20,
