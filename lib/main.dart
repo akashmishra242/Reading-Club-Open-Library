@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:reading_club_open_library/DetailedPages/Science_detailed_page.dart';
+import 'package:reading_club_open_library/core/store.dart';
 import 'package:reading_club_open_library/pages/home_page.dart';
 import 'package:reading_club_open_library/pages/login_page.dart';
 import 'package:reading_club_open_library/widgets/routes.dart';
@@ -10,7 +11,7 @@ import 'package:velocity_x/velocity_x.dart';
 import 'pages/landing_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(VxState(store: MyStore(), child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
