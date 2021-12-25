@@ -5,6 +5,7 @@ import 'package:reading_club_open_library/DetailedPages/Science_detailed_page.da
 import 'package:reading_club_open_library/core/store.dart';
 import 'package:reading_club_open_library/pages/home_page.dart';
 import 'package:reading_club_open_library/pages/login_page.dart';
+import 'package:reading_club_open_library/pages/profile.dart';
 import 'package:reading_club_open_library/widgets/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -26,6 +27,8 @@ class MyApp extends StatelessWidget {
           MyRoutes.homePage: (context) => HomePage(),
           MyRoutes.loginPage: (context) => LoginPage(),
           MyRoutes.landingPage: (context) => LandingPage(),
+          MyRoutes.profile: (context) => ProfilePage(),
+
           //MyRoutes.sciDPage: (context) => SciDPage(),
         });
   }

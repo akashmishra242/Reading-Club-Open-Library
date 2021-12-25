@@ -15,7 +15,7 @@ class LandingPage extends StatefulWidget {
 class _LandingPageState extends State<LandingPage> {
   List<Widget> navigate = [
     const BookmarkPage(),
-    const HomePage(),
+    HomePage(),
     const ProfilePage()
   ];
   String homeicon =

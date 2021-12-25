@@ -14,23 +14,51 @@ class Business extends StatefulWidget {
 }
 
 class _BusinessState extends State<Business> {
+  bool issorted = false;
   bool isbookmarked = false;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CupertinoSearchTextField(
-          backgroundColor: Colors.red.shade100,
-          onChanged: (value) {
-            SearchMutation(value);
-          },
-        ).pOnly(top: 8).h(50),
+        Row(
+          children: [
+            CupertinoSearchTextField(
+              backgroundColor: Colors.red.shade100,
+              onChanged: (value) {
+                SearchMutation(value);
+              },
+            ).pOnly(top: 8).h(50).wThreeForth(context),
+            IconButton(
+              color: Colors.black,
+              iconSize: 35,
+              onPressed: () {
+                setState(() {
+                  issorted = !issorted;
+                });
+              },
+              icon: issorted
+                  ? const Icon(CupertinoIcons.sort_up)
+                  : const Icon(CupertinoIcons.sort_down),
+            ).expand().wOneForth(context),
+          ],
+        ),
         VxBuilder(
           mutations: const {SearchMutation, BAddMutation, BRemoveMutation},
           builder: (context, store, status) => ListView.builder(
             itemCount: (VxState.store as MyStore).barticle.length,
             itemBuilder: (context, index) {
-              final busItem = (VxState.store as MyStore).barticle[index];
+              //final busItem = (VxState.store as MyStore).barticle[index];
+
+              final sortedsciItem = issorted //4th
+                  ? (VxState.store as MyStore)
+                      .barticle
+                      .sortedBy((a, b) => b.name.compareTo(a.name))
+                  : (VxState.store as MyStore)
+                      .barticle
+                      .sortedBy((a, b) => a.name.compareTo(b.name));
+
+              final busItem = sortedsciItem[index];
+
               return VxBox(
                       child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,

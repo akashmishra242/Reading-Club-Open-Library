@@ -9,6 +9,7 @@ import 'package:reading_club_open_library/Article/business.dart';
 import 'package:reading_club_open_library/Article/entertainment.dart';
 import 'package:reading_club_open_library/Article/science.dart';
 import 'package:reading_club_open_library/core/store.dart';
+import 'package:reading_club_open_library/pages/profile.dart';
 import 'package:reading_club_open_library/widgets/drawer.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'business.dart';
@@ -16,7 +17,8 @@ import 'entertainment.dart';
 import 'science_tech.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  late bool isascending = false;
+  //const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -24,7 +26,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   late TabController _controller;
-
+  bool isAscending = false;
+  final imageUrl = "https://cdn-icons-png.flaticon.com/512/3011/3011270.png";
   @override
   void initState() {
     super.initState();
@@ -76,9 +79,20 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       appBar: AppBar(
         title: "Reading Club -Open Library".text.make(),
         actions: [
+          // InkWell(
+          //   onTap: () {},
+          //   child: CircleAvatar(
+          //     backgroundImage: NetworkImage(imageUrl),
+          //   ).p4(),
+          // ),
+
           IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.sort),
+            onPressed: () {
+              // Navigator.push(context,
+              //     MaterialPageRoute(builder: (context) => ProfilePage()));
+            },
+            icon: Image.network(imageUrl),
+            iconSize: 35,
           ),
         ],
         bottom: TabBar(
