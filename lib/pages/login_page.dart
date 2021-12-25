@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:reading_club_open_library/core/store.dart';
+import 'package:reading_club_open_library/pages/landing_page.dart';
+import 'package:velocity_x/velocity_x.dart';
 import 'home_page.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  late String UserName = "";
+  //const LoginPage({Key? key}) : super(key: key);
 
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
+
+final formkey = GlobalKey<FormState>();
 
 class _LoginPageState extends State<LoginPage> {
   static const String imageUrl =
@@ -15,14 +21,17 @@ class _LoginPageState extends State<LoginPage> {
   bool eyeopen = false;
   bool isDigit = false;
   num changeColor = 1;
+  String username = "";
   bool entry = false;
-  // ignore: unused_field
   final _formkey = GlobalKey<FormState>();
   moveToHome(BuildContext context) async {
     if (_formkey.currentState!.validate()) {
       setState(() {
         changeButton = true;
+
+        (VxState.store as MyStore).loginPage.UserName = username; //imp
       });
+      //UserName= username.text.toString();
 
       for (var i = 0; i < 10; i++) {
         changeColor = changeColor * (-1);
@@ -31,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
         setState(() {});
       }
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => HomePage()));
+          context, MaterialPageRoute(builder: (context) => LandingPage()));
       setState(() {
         changeButton = false;
       });
@@ -75,6 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                         validator: (value) {
+                          username = value.toString();
                           if (value!.isEmpty) {
                             return "UserName can't be empty";
                           }

@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:reading_club_open_library/Article/business.dart';
 import 'package:reading_club_open_library/Article/entertainment.dart';
 import 'package:reading_club_open_library/Article/science.dart';
+import 'package:reading_club_open_library/widgets/drawer.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'business.dart';
 import 'entertainment.dart';
@@ -92,7 +93,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           Business(),
         ],
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reading_club_open_library/DetailedPages/Science_detailed_page.dart';
+import 'package:reading_club_open_library/widgets/add_to_bookmark.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import 'package:reading_club_open_library/Article/science.dart';
@@ -67,27 +68,9 @@ class _ScienceTechState extends State<ScienceTech> {
                   ButtonBar(
                     alignment: MainAxisAlignment.end,
                     children: [
-                      IconButton(
-                          onPressed: () {
-                            setState(() {
-                              isbookmarked = !isbookmarked;
-                            });
-                            isbookmarked
-                                ? ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
-                                        duration:
-                                            const Duration(milliseconds: 1000),
-                                        content: "Bookmark Added".text.make()))
-                                : ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
-                                        duration:
-                                            const Duration(milliseconds: 1000),
-                                        content:
-                                            "Bookmark Removed".text.make()));
-                          },
-                          icon: isbookmarked
-                              ? const Icon(Icons.bookmark_added_sharp)
-                              : const Icon(Icons.bookmark_add_sharp)),
+                      AddToBookmark(
+                        article: sciItem,
+                      ),
                       ElevatedButton(
                         onPressed: null,
                         child: "Read >>".text.bold.black.make(),
