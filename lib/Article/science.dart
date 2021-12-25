@@ -1,4 +1,7 @@
 // ignore_for_file: non_constant_identifier_names, unrelated_type_equality_checks
+import 'package:flutter/material.dart';
+import 'package:reading_club_open_library/core/store.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class SciArticle {
   static List<Article> article = [];
@@ -55,5 +58,21 @@ class Article {
       map['auth_image'],
       map['article'],
     );
+  }
+}
+
+class SearchMutation extends VxMutation<MyStore> {
+  final String query;
+
+  SearchMutation(this.query);
+  @override
+  perform() {
+    if (query.length >= 1) {
+      store!.article = SciArticle.article
+          .where((el) => el.name.toLowerCase().contains(query.toLowerCase()))
+          .toList();
+    } else {
+      store!.article = SciArticle.article;
+    }
   }
 }

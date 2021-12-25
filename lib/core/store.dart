@@ -11,6 +11,11 @@ class MyStore extends VxStore {
   late EntArticle entArticle;
   late BookmarkItem bookmarkItem;
   late LoginPage loginPage;
+  //List<Item> items;
+  late List<Article> article;
+  late List<BArticle> barticle;
+
+  late List<EArticle> earticle;
 
   MyStore() {
     sciArticle = SciArticle();

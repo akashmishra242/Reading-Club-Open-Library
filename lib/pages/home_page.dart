@@ -2,11 +2,13 @@
 
 import 'dart:convert';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:reading_club_open_library/Article/business.dart';
 import 'package:reading_club_open_library/Article/entertainment.dart';
 import 'package:reading_club_open_library/Article/science.dart';
+import 'package:reading_club_open_library/core/store.dart';
 import 'package:reading_club_open_library/widgets/drawer.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'business.dart';
@@ -40,6 +42,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     SciArticle.article = List.from(sciArticleData)
         .map<Article>((article) => Article.fromMap(article))
         .toList();
+    (VxState.store as MyStore).article = SciArticle.article;
     setState(() {});
   }
 
@@ -51,6 +54,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     BusArticle.article = List.from(busArticleData)
         .map<BArticle>((article) => BArticle.fromMap(article))
         .toList();
+    (VxState.store as MyStore).barticle = BusArticle.article;
     setState(() {});
   }
 
@@ -62,6 +66,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     EntArticle.article = List.from(entArticleData)
         .map<EArticle>((article) => EArticle.fromMap(article))
         .toList();
+    (VxState.store as MyStore).earticle = EntArticle.article;
     setState(() {});
   }
 
@@ -73,7 +78,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.search_sharp),
+            icon: Icon(Icons.sort),
           ),
         ],
         bottom: TabBar(
