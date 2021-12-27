@@ -39,13 +39,14 @@ class _BusinessState extends State<Business> {
               icon: issorted
                   ? const Icon(CupertinoIcons.sort_up)
                   : const Icon(CupertinoIcons.sort_down),
-            ).expand().wOneForth(context),
+            ).wOneForth(context),
           ],
         ),
         VxBuilder(
           mutations: const {SearchMutation, BAddMutation, BRemoveMutation},
           builder: (context, store, status) => ListView.builder(
             itemCount: (VxState.store as MyStore).barticle.length,
+            shrinkWrap: true,
             itemBuilder: (context, index) {
               //final busItem = (VxState.store as MyStore).barticle[index];
 

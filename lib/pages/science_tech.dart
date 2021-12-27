@@ -40,12 +40,13 @@ class _ScienceTechState extends State<ScienceTech> {
               icon: issorted
                   ? const Icon(CupertinoIcons.sort_up)
                   : const Icon(CupertinoIcons.sort_down),
-            ).expand().wOneForth(context),
+            ).wOneForth(context),
           ],
         ),
         VxBuilder(
           mutations: const {SearchMutation, SAddMutation, SRemoveMutation},
           builder: (context, store, status) => ListView.builder(
+            shrinkWrap: true,
             itemCount: (VxState.store as MyStore).article.length,
             itemBuilder: (context, index) {
               // final sortedsciItem = //2nd
@@ -88,52 +89,53 @@ class _ScienceTechState extends State<ScienceTech> {
                     ],
                   ),
                   Expanded(
-                      child: Container(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
-                    child: Column(
-                      // crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        sciItem.name.text.bold.xl2.center.make(),
-                        const SizedBox(
-                          height: 4,
-                        ),
-                        Align(
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 4, vertical: 2),
+                      child: Column(
+                        // crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          sciItem.name.text.bold.xl2.center.make(),
+                          const SizedBox(
+                            height: 4,
+                          ),
+                          Align(
+                              alignment: Alignment.topRight,
+                              child: "On: ${sciItem.Date} at: ${sciItem.time}"
+                                  .text
+                                  .textStyle(const TextStyle(fontSize: 10))
+                                  .make()),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Align(
                             alignment: Alignment.topRight,
-                            child: "On: ${sciItem.Date} at: ${sciItem.time}"
-                                .text
-                                .textStyle(const TextStyle(fontSize: 10))
-                                .make()),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        Align(
-                          alignment: Alignment.topRight,
-                          child: sciItem.desc.text
-                              .textStyle(const TextStyle(
-                                  fontSize: 15, color: Colors.purple))
-                              .make(),
-                        ),
-                        ButtonBar(
-                          alignment: MainAxisAlignment.end,
-                          children: [
-                            AddToBookmark(
-                              article: sciItem,
-                            ),
-                            ElevatedButton(
-                              onPressed: null,
-                              child: "Read >>".text.bold.black.make(),
-                              style: TextButton.styleFrom(
-                                  shape: const StadiumBorder(
-                                      side: BorderSide(
-                                          width: 3, color: Colors.black)),
-                                  backgroundColor: Colors.white),
-                            ),
-                          ],
-                        ),
-                      ],
+                            child: sciItem.desc.text
+                                .textStyle(const TextStyle(
+                                    fontSize: 15, color: Colors.purple))
+                                .make(),
+                          ),
+                          ButtonBar(
+                            alignment: MainAxisAlignment.end,
+                            children: [
+                              AddToBookmark(
+                                article: sciItem,
+                              ),
+                              ElevatedButton(
+                                onPressed: null,
+                                child: "Read >>".text.bold.black.make(),
+                                style: TextButton.styleFrom(
+                                    shape: const StadiumBorder(
+                                        side: BorderSide(
+                                            width: 3, color: Colors.black)),
+                                    backgroundColor: Colors.white),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
-                  )),
+                  ),
                 ],
               ))
                   .color(const Color(0xFFF5F5F5))

@@ -39,13 +39,14 @@ class _EntertainmentState extends State<Entertainment> {
               icon: issorted
                   ? const Icon(CupertinoIcons.sort_up)
                   : const Icon(CupertinoIcons.sort_down),
-            ).expand().wOneForth(context),
+            ).wOneForth(context),
           ],
         ),
         VxBuilder(
           mutations: const {SearchMutation, EAddMutation, ERemoveMutation},
           builder: (context, store, status) => ListView.builder(
             itemCount: (VxState.store as MyStore).earticle.length,
+            shrinkWrap: true,
             itemBuilder: (context, index) {
               // final entItem = (VxState.store as MyStore).earticle[index];
 
