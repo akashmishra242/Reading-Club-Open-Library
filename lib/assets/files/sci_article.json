@@ -1,0 +1,48 @@
+{
+    "sci_article": [
+        {
+            "id": 1,
+            "name": "Science - 500 Facts",
+            "desc": "This book provide 500 unique facts of science ₹279.00 , M.R.P.: ₹450.00 You Save: ₹171.00 (38%) Inclusive of all taxes",
+            "Date": "26/11/2021",
+            "time": "14:47",
+            "Author": "Mr.Pegasus",
+            "image": "https://images-eu.ssl-images-amazon.com/images/I/51NtanM1zXL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg",
+            "auth_image": "https://images-na.ssl-images-amazon.com/images/I/91VPn-tNjKL._SY300_.jpg",
+            "article": "Our world is full of thought-provoking things: the development of species on Earth, importance of energy, matter, life on other planets, fascinating inventions, etc. are all part of a single term called Science. 500 Facts -Science brings these curious and fascinating facts from science in one book. With interesting, mind-boggling facts, beautiful and relevant images linked to the information, this book is a must-read for curious young minds or anyone who is interested in knowing and understanding science."
+        },
+        {
+            "id": 2,
+            "name": "The Science Book: Big Ideas Simply Explained",
+            "desc": " String theory, Black holes, gravity and radiation ₹733.00 + ₹68.06 Delivery charge",
+            "Date": "29/11/2021",
+            "time": "12:47",
+            "Author": "Mr. Dan Green",
+            "image": "https://images-eu.ssl-images-amazon.com/images/I/51XUoPBGAeS._SX198_BO1,204,203,200_QL40_FMwebp_.jpg",
+            "auth_image": "https://images-na.ssl-images-amazon.com/images/I/A1KK1XufHVL._SX450_.jpg",
+            "article": "What is string theory or black holes? And who discovered gravity and radiation? The Science Book presents the fascinating story behind these and other of the world's most important concepts in maths, chemistry, physics and biology in plain English, with easy to grasp 'mind maps' and eye-catching artworks.."
+        },
+        {
+            "id": 3,
+            "name": "Science Shorts",
+            "desc": "Curious questions with short answers 226.00 inclusive of all taxe",
+            "Date": "2/12/2021",
+            "time": "9:47",
+            "Author": "Mr.Kieran dyer",
+            "image": "https://m.media-amazon.com/images/I/41-muRHiwUL.jpg",
+            "auth_image": "https://images-na.ssl-images-amazon.com/images/S/amzn-author-media-prod/g74g048ivbcnfvtgpp096juv2c._SY300_.jpg",
+            "article": "A wonder some minds will also be thinking about the random curiosities of life, about nature and far beyond what our minds are capable of thinking. After all, it is because of these people we have science by which all of these great wonderful curious thinkers with sheer determination and passion helped develop a great understanding of this world allowing for advancements in medicine and technology."
+        },
+        {
+            "id": 4,
+            "name": "Article Name/Heading of article",
+            "desc": "About Science Fiction Digital List Price:  496.65, Kindle Price : 279.07 Save    217.58 (44%) inclusive of all taxes",
+            "Date": "3/12/2021",
+            "time": "14:50",
+            "Author": "Mr.Tarun saint",
+            "image": "https://m.media-amazon.com/images/I/51+bBBfeJlL.jpg",
+            "auth_image": "https://m.media-amazon.com/images/I/51+bBBfeJlL._SY346_.jpg",
+            "article": "On an ordinary morning, the citizens of Karachi wake up to discover the sea missing from their shores. The last Parsi left on Earth must look for other worlds to escape to when debt collectors come knocking. A family visiting a Partition-themed park gets more entertainment than they bargained for. Gandhi appears in the present day under rather unusual circumstances. Aliens with an agenda arrive at a railway station in Uttar Pradesh. Two young scientists seek to communicate with forests even as the web of life threatens to collapse. A young girl's personal tragedy finds a surprising resolution as she readies herself for an expedition of a life time."
+        }
+    ]
+}

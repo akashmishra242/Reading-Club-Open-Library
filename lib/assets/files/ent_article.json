@@ -1,0 +1,81 @@
+{
+    "ent_article": [
+        {
+            "id": 1,
+            "name": " Whatcha Gonna Do with That Duck",
+            "desc": "Whatcha Gonna Do with That Duck?: And Other Provocations, 2006-2012 Hardcover – 27 December 2012",
+            "Date": "2006-2012",
+            "time": "1:47",
+            "Author": "Seth Godin",
+            "image": "https://cdn.lifehack.org/wp-content/uploads/2014/01/Whatcha-Gonna-Do-with-That-Duck-.jpg",
+            "auth_image": "https://bit.ly/3dY3FLa",
+            "article": "This book is a masterpiece, and unlike most self-improvement books, this one targets an infinite array of areas in which you can, and ultimately must, improve.With its ruthless honesty and genuine inspiration, Godin makes you ponder the difficult questions you wouldn’t ever dare to ask yourself. The result is a completely new perspective of the world- a fresher, more vibrant perspective, packed with new and bold possibilities. If you need a friend who understands you, a boss that forces you to venture deep in your non-comfort zone, a wise guru that tells you what needs to be left behind and a sage that proclaims the coming of a new age, then look no further; you will find these shrewd voices all tied together in this magnificent book. Make sure to get this one."
+        },
+        {
+            "id": 2,
+            "name": "Fooled by Randomness",
+            "desc": "Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets",
+            "Date": "21/11/2021",
+            "time": "6:47",
+            "Author": "Nassim N.Taleb",
+            "image": "https://cdn.lifehack.org/wp-content/uploads/2014/01/Fooled-by-Randomness.jpg",
+            "auth_image": "https://bit.ly/32bNlUi",
+            "article": "Perhaps it is the fact that randomness played such a significant role in my years as a poker player that I find this book utterly important. We often attribute skill where there is only luck; we confuse correlation with causation and we underestimate the incredible effect small changes can have.This book gave me a perspective that I unfortunately rarely encounter in others: you can do  everything right and still lose, or do everything wrong and still win.It is thus not about the outcome;it is about your actions that have lead you there. This important message is central to many of my decisions I make in my life. This book by Taleb helps you develop such a perspective so you will be able to live in a world one cannot fully understand, where the results are not always clear markers of performance and where chance seems to play games with our fates.Stop being fooled by randomness!"
+        },
+        {
+            "id": 3,
+            "name": "The 48 Laws of Power",
+            "desc": "The 48 Laws Of Power (The Modern Machiavellian Robert Greene Book 1)",
+            "Date": "2/12/2021",
+            "time": "5:29",
+            "Author": "Robert Greene",
+            "image": "https://m.media-amazon.com/images/I/314O9OCAtzL.jpg",
+            "auth_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Robert_Greene_B%26W.jpg/220px-Robert_Greene_B%26W.jpg",
+            "article": "I read this book in a time where I thought power was something I should attain. Power for power’s sake. And while I disagree with my former self on this point, the fact remains that power is very real, it forms the invisible sceptre of all hierarchical relations around us. I still recommend this book. I believe it is important to know how people use power for their own benefit and what to do to protect yourself from certain abuses of power. Besides the fact that all stories in this book gravitate around power. It contains many life lessons, amazing historical anecdotes. If read in a certain light, the ability to use power for good. From Caesar to Goethe, Sun-Tzu to Machiavelli, this eye-opening book spans a wide range of human development. If you, like me, would rather be interested in something less egotistical, perhaps Greene’s latest book Mastery will suffice (I haven’t read that one myself). Another great book in the same style, but this time around; covering a wider scope, and perhaps, something that will make the world make a better place."
+        },
+        {
+            "id": 4,
+            "name": "The 7 Habits of Highly Effective People",
+            "desc": "The 7 Habits of Highly Effective People Pocket Book – 2 July 2019",
+            "Date": "13/11/2021",
+            "time": "13:50",
+            "Author": "Stephen. R. Covey",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/41ex6KR0NBL._SX355_BO1,204,203,200_.jpg",
+            "auth_image": "https://www.franklincovey.com/wp-content/uploads/2020/10/authors_stephen_copy.jpg",
+            "article": "The title of this book doesn’t capture it all. Covey shares with us seven habits one should adapt to become truly effective in whatever you would like to achieve.  Of course, it is not as easy as it sounds. He stresses the fact that we need to go through   a paradigm shift – a fundamental change in how we perceive the world and ourselves.  This book can be read as a guide, with practices and everything, to go through the stages in order to make such a shift happen. Part shock-therapy, part ageless spiritual wisdom, Covey’s book is packed with wisdom   that actually makes a difference.  And as I mentioned, don’t let the title of the book fool you; it is about much more than just becoming more effective.   It is about becoming a whole integer person who not only seeks the best in oneself, but also in the people around her.  A must read for anyone who feels there is always something left to learn.    "
+        },
+        {
+            "id": 5,
+            "name": "The Psychedelic Explorer’s Guide ",
+            "desc": "The Psychedelic Explorer's Guide: Safe, Therapeutic, and Sacred Journeys Paperback – Illustrated, 18 May 2011",
+            "Date": "3/12/2021",
+            "time": "14:50",
+            "Author": "James Fadiman",
+            "image": "https://cdn.lifehack.org/wp-content/uploads/2014/01/The-Psychedelic-Explorer%E2%80%99s-Guide.jpg",
+            "auth_image": "https://global-uploads.webflow.com/5e33a765cf951f99dc204f8b/5e4e51d647c620256b2f0fe5_james-fadiman.jpeg",
+            "article": "While finding a book on psychedelics in this list of books on self-improvement might come as a surprise, I believe any metaphysical distinction between tools such as books, meditation or molecules hold no ground. They should all be solely judged on their merits. And the merits of certain chemical keys, used in a constructive way, are perhaps bigger than any book in this list. The Psychedelic Explorer’s Guide will teach you how to prepare yourself and your surroundings, what and how much to take, and what do when something goes wrong. So, you can safely enhance your thinking, creativity, introspection and emotional balance. This book contains everything you need to know about using psychedelics as a tool for self-improvement while drawing on extensive scientific literature and personal wisdom. A must have for the beginning and experienced psychopath alike. "
+        },
+        {
+            "id": 6,
+            "name": "Eat That Frog!",
+            "desc": "Eat That Frog!: 21 Great Ways to Stop Procrastinating and Get More Done in Less Time",
+            "Date": "3/12/2021",
+            "time": "14:50",
+            "Author": "Brian Tracy",
+            "image": "https://cdn.lifehack.org/wp-content/uploads/2014/01/Eat-that-Frog-Book-Cover.jpg",
+            "auth_image": "https://www.fearlessmotivation.com/wp-content/uploads/2017/03/brian-tracy-quotes-750x400.jpg",
+            "article": "We all know how that destructive downward spiral feel. We have to do some big tasks of which the thought alone triggers resistance. We aren’t sure how and where to begin and feeling overwhelmed before we even start. We get easily distracted to get rid of that feeling, only to suddenly realize that hours went by- precious hours- and then find ourselves in the same position as before, still not knowing where and how to begin, but now, feeling guilty on top of it which expresses itself in more craving for distraction. To break this spell of procrastination before it paralyzes us, Tracy advises us to Eat That Frog: to set our priorities straight, deconstruct larger tasks into smaller ones, learn when to tackle the big frog first or to start out with something else. Tracy is truly a motivational writer. While I wished he had gone a bit deeper into the psychological reasons why people procrastinate, it is still a must have for anyone who wants to break the spell and get shit done."
+        },
+        {
+            "id": 7,
+            "name": "The Attention Revolution",
+            "desc": "The Attention Revolution: Unlocking the Power of the Focused Mind: v.ution (The Attention RE: Unlocking the Power of the Focused Mind) Paperback – 13 April 2006",
+            "Date": "3/12/2021",
+            "time": "14:50",
+            "Author": "Alan Wallace",
+            "image": "https://cdn.lifehack.org/wp-content/uploads/2014/01/the-attention-revolution.jpg",
+            "auth_image": "https://www.shambhala.com/media/catalog/category/B._Allan_Wallace_1.jpeg",
+            "article": "In a world that is dominated by ever stronger technologies designed to grab your attention, a way to empower yourself is to bring that attention back to where you want it to shine. This book offers just that. In The Attention Revolution, Wallace describes the path to attaining Shamata, a Buddhist meditation state of mind that is free from any flickering of distraction. It is a hard and long path, probably not possible for us to reach in this lifetime. However, even getting to stage two or three will make everything in life easier. A wonderful introduction to meditation, The Attention Revolution will inspire you to take on the challenge and see what training your mind can actually achieve. Once you have achieved such level of focus, you can put it to use to open your heart with the practice of The Four Immeasurable or deepen the practice with this wonderful commentary by Duomo Lingpa, both by Alan B. Wallace. Before you read this book, you may want to take a look at this guide so you get a better idea on how to prioritize your life."
+        }
+    ]
+}
