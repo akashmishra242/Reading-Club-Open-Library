@@ -26,4 +26,4 @@ https://user-images.githubusercontent.com/91900783/181625288-b8750ef7-1a43-4626-
 
 # [.apk] file link
 
-https://drive.google.com/file/d/1CQrxqi4p6XfluZwNeG7Rp3cOUc2JtOqe/view?usp=sharing
+https://drive.google.com/file/d/1ZTIsMReGteN_L2iwiYoOKbcIW9vloy5M/view?usp=sharing
